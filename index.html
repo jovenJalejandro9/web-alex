@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alex Moreno Jiménez · Automatizador de procesos con IA</title>
+<meta name="description" content="Ingeniero informático que automatiza procesos de empresa con IA. Cofundador de AiKit Research. Madrid, España.">
+<style>
+@font-face{font-family:Inter;src:url(fonts/Inter.ttf);font-weight:100 900;font-display:swap}
+:root{--navy:#061b31;--slate:#64748d;--indigo:#533afd;--line:#e5edf5;--tint:#f6f9fc;--pill:#ededff;--grad:linear-gradient(135deg,#ff7a59,#9a6bff)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;font-feature-settings:"ss01","cv11";color:var(--navy);background:#fff;line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:10;transition:.25s}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav.s{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-weight:600;text-decoration:none;color:#fff;font-size:15px;transition:.25s}
+nav.s .brand{color:var(--navy)}
+.links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:500}
+.links a{text-decoration:none;color:rgba(255,255,255,.85);transition:.2s}
+.links a:hover{color:#fff}
+nav.s .links a{color:var(--slate)}nav.s .links a:hover{color:var(--navy)}
+.lang{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:99px;overflow:hidden}
+nav.s .lang{border-color:var(--line)}
+.lang button{border:0;background:none;font:inherit;font-size:12px;font-weight:600;padding:5px 11px;color:rgba(255,255,255,.8);cursor:pointer}
+nav.s .lang button{color:var(--slate)}
+.lang button.on{background:#fff;color:var(--indigo)}
+nav.s .lang button.on{background:var(--indigo);color:#fff}
+/* hero */
+.hero{position:relative;color:#fff;padding:150px 0 110px;overflow:hidden;
+background:radial-gradient(60% 80% at 88% 0%,#ffb347,transparent 60%),radial-gradient(55% 70% at 70% 90%,#ff5fb5,transparent 62%),radial-gradient(60% 80% at 15% 110%,#9a6bff,transparent 60%),linear-gradient(120deg,#533afd,#2a1f8f)}
+.hero .wrap{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+.av{display:inline-flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.av span{font-size:13px;font-weight:500;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:5px 13px;border-radius:99px;backdrop-filter:blur(6px)}
+h1{font-size:68px;line-height:1.02;font-weight:300;letter-spacing:-.035em}
+h1 b{font-weight:600}
+.tit{font-size:22px;font-weight:400;margin-top:22px;max-width:560px;color:rgba(255,255,255,.95)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;transition:.2s}
+.btn.p{background:#fff;color:var(--indigo)}.btn.p:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,27,49,.3)}
+.btn.g{color:#fff;border:1px solid rgba(255,255,255,.5)}.btn.g:hover{background:rgba(255,255,255,.14)}
+.ph{width:300px;height:300px;border-radius:28px;object-fit:cover;box-shadow:0 30px 60px -20px rgba(6,27,49,.55);border:4px solid rgba(255,255,255,.35)}
+/* sections */
+section{padding:96px 0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);margin-bottom:14px}
+h2{font-size:40px;font-weight:300;letter-spacing:-.025em;line-height:1.12;max-width:720px}
+h2 b{font-weight:600}
+.lead{color:var(--slate);font-size:19px;max-width:660px;margin-top:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.card{border:1px solid var(--line);border-radius:16px;padding:28px;background:#fff;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(83,58,253,.28)}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--grad);margin-bottom:18px}
+.card h3{font-size:19px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--slate);font-size:15.5px}
+.tint{background:var(--tint)}
+.ex{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;list-style:none}
+.ex li{display:flex;gap:14px;align-items:flex-start;font-size:17px}
+.ex li:before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--grad);margin-top:9px}
+/* timeline */
+.tl{margin-top:48px;border-top:1px solid var(--line)}
+.tl article{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line)}
+.tl .d{font-size:14px;font-weight:500;color:var(--slate)}.tl .d span{display:block;font-weight:400;margin-top:2px}
+.tl h3{font-size:21px;font-weight:600}
+.tl .rol{color:var(--indigo);font-weight:500;font-size:15px;margin:2px 0 8px}
+.tl p.x{color:var(--slate);font-size:16px}
+.tl p.x+p.x{margin-top:6px}
+.tl ul{margin-top:10px;list-style:none}
+.tl li{position:relative;padding-left:20px;color:var(--navy);font-size:15.5px;margin-top:5px}
+.tl li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--grad)}
+.before{margin-top:44px}
+.before h3{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
+.before article{padding:18px 0}
+.before h4{font-size:18px;font-weight:600;display:inline}
+.before .m{color:var(--slate);font-size:15px;margin-left:8px}
+.before p{color:var(--slate);font-size:15.5px;margin-top:2px}
+/* stack */
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pills span{background:var(--pill);color:var(--indigo);font-weight:600;font-size:15px;padding:8px 16px;border-radius:99px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+.two h3{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+.two p{color:var(--slate);margin-top:10px;font-size:16px}
+.two p b{color:var(--navy);font-weight:600}
+/* contact */
+.contact{color:#fff;text-align:left;background:radial-gradient(60% 90% at 90% 0%,#ffb347,transparent 60%),radial-gradient(55% 80% at 70% 100%,#ff5fb5,transparent 62%),radial-gradient(60% 80% at 10% 110%,#9a6bff,transparent 60%),linear-gradient(120deg,#533afd,#2a1f8f)}
+.contact h2{color:#fff;font-size:48px}
+.contact .lead{color:rgba(255,255,255,.9)}
+.contact .meta{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap;font-size:15px;color:rgba(255,255,255,.9)}
+footer{padding:26px 0;font-size:13px;color:var(--slate)}
+@media(max-width:860px){
+body{font-size:16px}
+.links a.h{display:none}
+.hero{padding:110px 0 70px}
+.hero .wrap{grid-template-columns:1fr;gap:36px}
+.ph{width:180px;height:180px;order:-1;border-radius:22px}
+h1{font-size:44px}.tit{font-size:18px}
+section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
+.cards,.two,.ex{grid-template-columns:1fr}
+.tl article{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+<a class="brand" href="#top">Alex Moreno Jiménez</a>
+<div class="links">
+<a class="h" href="#hago" data-es="Qué hago" data-en="What I do">Qué hago</a>
+<a class="h" href="#trayectoria" data-es="Trayectoria" data-en="Experience">Trayectoria</a>
+<a class="h" href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+<div class="lang"><button id="bes" class="on">ES</button><button id="ben">EN</button></div>
+</div></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<div class="av"><span data-es="Disponibilidad inmediata" data-en="Available immediately">Disponibilidad inmediata</span><span data-es="Híbrido o remoto" data-en="Hybrid or remote">Híbrido o remoto</span><span data-es="Horario flexible" data-en="Flexible hours">Horario flexible</span><span>Madrid, España</span></div>
+<h1 data-es="Automatizo procesos de empresa <b>con IA</b>" data-en="I automate company processes <b>with AI</b>">Automatizo procesos de empresa <b>con IA</b></h1>
+<p class="tit" data-es="Ingeniero informático y cofundador de AiKit Research. Uso IA a diario desde 2023 y busco una empresa que quiera llevarla a toda su operación." data-en="Computer engineer and co-founder of AiKit Research. I've used AI daily since 2023 and I'm looking for a company that wants to bring it into its whole operation.">Ingeniero informático y cofundador de AiKit Research. Uso IA a diario desde 2023 y busco una empresa que quiera llevarla a toda su operación.</p>
+<div class="cta">
+<a class="btn p" href="mailto:alexspacer9@gmail.com" data-es="Contactar por correo" data-en="Contact by email">Contactar por correo</a>
+<a class="btn g" id="cv" href="cv/CV_AlexMoreno_ES.pdf" data-es="Ver CV (PDF)" data-en="View CV (PDF)">Ver CV (PDF)</a>
+<a class="btn g" href="https://www.linkedin.com/in/alex-moreno-jim%C3%A9nez-33b404128/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+<img class="ph" src="foto.jpg" alt="Alex Moreno Jiménez">
+</div></header>
+
+<section id="hago"><div class="wrap">
+<p class="eyebrow" data-es="Qué hago" data-en="What I do">Qué hago</p>
+<h2 data-es="Convierto la IA en procesos que <b>funcionan cada día</b>" data-en="I turn AI into processes that <b>work every day</b>">Convierto la IA en procesos que <b>funcionan cada día</b></h2>
+<p class="lead" data-es="Creo en la IA sin reservas. Mi trabajo es llevarla de la demo a la operación diaria de una empresa." data-en="I believe in AI without reservations. My job is taking it from the demo to a company's daily operation.">Creo en la IA sin reservas. Mi trabajo es llevarla de la demo a la operación diaria de una empresa.</p>
+<div class="cards">
+<div class="card"><div class="dot"></div><h3 data-es="Automatización de procesos" data-en="Process automation">Automatización de procesos</h3><p data-es="Detecto tareas repetitivas de administración y operación, y las convierto en flujos que funcionan solos." data-en="I spot repetitive admin and operations tasks and turn them into flows that run on their own.">Detecto tareas repetitivas de administración y operación, y las convierto en flujos que funcionan solos.</p></div>
+<div class="card"><div class="dot"></div><h3 data-es="IA conectada al CRM" data-en="AI connected to the CRM">IA conectada al CRM</h3><p data-es="Integro la IA con el CRM para automatizar cualquier proceso de la empresa." data-en="I integrate AI with the CRM to automate any company process.">Integro la IA con el CRM para automatizar cualquier proceso de la empresa.</p></div>
+<div class="card"><div class="dot"></div><h3 data-es="Sistemas agénticos" data-en="Agentic systems">Sistemas agénticos</h3><p data-es="Uso a diario sistemas agénticos empresariales y agentes personales, directos o con harness." data-en="I use agentic business systems and personal agents daily, both direct and harness-based.">Uso a diario sistemas agénticos empresariales y agentes personales, directos o con harness.</p></div>
+</div>
+</div></section>
+
+<section class="tint"><div class="wrap">
+<p class="eyebrow" data-es="Algunas cosas que he hecho" data-en="Some things I've done">Algunas cosas que he hecho</p>
+<h2 data-es="Procesos reales, <b>automatizados</b>" data-en="Real processes, <b>automated</b>">Procesos reales, <b>automatizados</b></h2>
+<ul class="ex">
+<li data-es="Automaticé todas las facturas de compras." data-en="I automated all purchase invoices.">Automaticé todas las facturas de compras.</li>
+<li data-es="Automaticé el fichaje de los empleados." data-en="I automated employee time tracking.">Automaticé el fichaje de los empleados.</li>
+<li data-es="Automaticé la gestión de vacaciones." data-en="I automated vacation management.">Automaticé la gestión de vacaciones.</li>
+<li data-es="Asumí el rol de Head of Talent: perfiles, selección y cierre." data-en="I took on the Head of Talent role: profiles, hiring and closing.">Asumí el rol de Head of Talent: perfiles, selección y cierre.</li>
+</ul>
+</div></section>
+
+<section id="trayectoria"><div class="wrap">
+<p class="eyebrow" data-es="Trayectoria" data-en="Experience">Trayectoria</p>
+<h2 data-es="De fundar empresas a <b>automatizarlas</b>" data-en="From founding companies to <b>automating them</b>">De fundar empresas a <b>automatizarlas</b></h2>
+<div class="tl">
+<article><div class="d"><span data-es="sept. 2023 – nov. 2026" data-en="Sep 2023 – Nov 2026">sept. 2023 – nov. 2026</span><span>Madrid</span></div><div><h3>AiKit Research</h3><p class="rol" data-es="Cofundador · Automatizador de procesos con IA" data-en="Co-founder · AI process automation">Cofundador · Automatizador de procesos con IA</p><p class="x" data-es="Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más." data-en="Model distributor: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM and more.">Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más.</p><p class="x" data-es="Integra la IA con el CRM para automatizar cualquier proceso de la empresa." data-en="Integrates AI with the CRM to automate any company process.">Integra la IA con el CRM para automatizar cualquier proceso de la empresa.</p></div></article>
+<article><div class="d"><span data-es="abr. 2021 – dic. 2025" data-en="Apr 2021 – Dec 2025">abr. 2021 – dic. 2025</span><span>Tres Cantos, Madrid</span></div><div><h3>Work In Space</h3><p class="rol" data-es="Fundador y propietario" data-en="Founder and owner">Fundador y propietario</p><p class="x" data-es="Coworking en espacio tecnológico centrado en IA." data-en="Coworking in a tech space focused on AI.">Coworking en espacio tecnológico centrado en IA.</p></div></article>
+<article><div class="d"><span data-es="jun. 2021 – mar. 2023" data-en="Jun 2021 – Mar 2023">jun. 2021 – mar. 2023</span><span>Madrid</span></div><div><h3>Talent Keepers Teambuilding</h3><p class="rol" data-es="Fundador" data-en="Founder">Fundador</p><p class="x" data-es="Teambuilding para equipos técnicos." data-en="Teambuilding for technical teams.">Teambuilding para equipos técnicos.</p></div></article>
+<article><div class="d"><span data-es="may. 2020 – may. 2022" data-en="May 2020 – May 2022">may. 2020 – may. 2022</span><span>Madrid</span></div><div><h3>BuhoLabs</h3><p class="rol" data-es="Cofundador y CEO" data-en="Co-founder and CEO">Cofundador y CEO</p><p class="x" data-es="Marketplace de productos químicos para distribuidores de todos los tamaños." data-en="Chemical products marketplace for distributors of all sizes.">Marketplace de productos químicos para distribuidores de todos los tamaños.</p></div></article>
+<article><div class="d"><span data-es="feb. 2018 – mar. 2022" data-en="Feb 2018 – Mar 2022">feb. 2018 – mar. 2022</span><span>Madrid</span></div><div><h3>Redradix</h3><p class="rol" data-es="Lead Project Manager · Desarrollador full stack · Event Manager" data-en="Lead Project Manager · Full stack developer · Event Manager">Lead Project Manager · Desarrollador full stack · Event Manager</p><p class="x" data-es="Agencia de desarrollo de aplicaciones." data-en="Application development agency.">Agencia de desarrollo de aplicaciones.</p>
+<ul><li data-es="Lideré proyectos de desarrollo de aplicaciones web." data-en="Led web application development projects.">Lideré proyectos de desarrollo de aplicaciones web.</li>
+<li data-es="Organicé hackathons con más de 300 desarrolladores en la UAM, la Carlos III, Ironhack y empresas, con una plataforma creada desde cero para evaluar su código." data-en="Organised hackathons with 300+ developers at UAM, Carlos III, Ironhack and companies, on a platform built from scratch to assess their code.">Organicé hackathons con más de 300 desarrolladores en la UAM, la Carlos III, Ironhack y empresas, con una plataforma creada desde cero para evaluar su código.</li></ul></div></article>
+</div>
+<div class="before">
+<h3 data-es="Antes" data-en="Before">Antes</h3>
+<article><h4>Truffle</h4><span class="m" data-es="CEO y cofundador · Chile · 2017–2018" data-en="CEO and co-founder · Chile · 2017–2018">CEO y cofundador · Chile · 2017–2018</span><p data-es="Productos de análisis de datos para encontrar al mejor personal para las empresas." data-en="Data analytics products to find the best staff for companies.">Productos de análisis de datos para encontrar al mejor personal para las empresas.</p></article>
+<article><h4>Jamming Madrid</h4><span class="m" data-es="CEO y fundador · 2016–2018" data-en="CEO and founder · 2016–2018">CEO y fundador · 2016–2018</span><p data-es="App con los datos de los 40 mejores clubes de música de Madrid, ampliada a Países Bajos." data-en="App with data on Madrid's 40 best music clubs, expanded to the Netherlands.">App con los datos de los 40 mejores clubes de música de Madrid, ampliada a Países Bajos.</p></article>
+</div>
+</div></section>
+
+<section class="tint"><div class="wrap">
+<p class="eyebrow" data-es="Mi set de trabajo" data-en="My toolset">Mi set de trabajo</p>
+<h2 data-es="Sistemas agénticos que <b>uso a diario</b>" data-en="Agentic systems I <b>use daily</b>">Sistemas agénticos que <b>uso a diario</b></h2>
+<div class="two">
+<div><h3 data-es="Directos, a medida desde cero" data-en="Direct, custom from scratch">Directos, a medida desde cero</h3><div class="pills"><span>Claude Code</span><span>Astra</span></div></div>
+<div><h3 data-es="Con harness" data-en="With harness">Con harness</h3><div class="pills"><span>OpenClaw</span><span>AiKit</span><span>Grok Bot</span></div></div>
+</div>
+<div class="two">
+<div><h3 data-es="Formación" data-en="Education">Formación</h3><p data-es="<b>Ingeniería informática</b>" data-en="<b>Computer engineering</b>"><b>Ingeniería informática</b></p></div>
+<div><h3 data-es="Idiomas" data-en="Languages">Idiomas</h3><p data-es="<b>Español</b> · <b>Inglés</b> fluido, uso profesional" data-en="<b>Spanish</b> · <b>English</b> fluent, professional use"><b>Español</b> · <b>Inglés</b> fluido, uso profesional</p></div>
+</div>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+<p class="eyebrow" style="color:#fff;opacity:.85" data-es="Contacto" data-en="Contact">Contacto</p>
+<h2 data-es="¿Tienes un caso? <b>Propónmelo.</b>" data-en="Got a case? <b>Pitch it to me.</b>">¿Tienes un caso? <b>Propónmelo.</b></h2>
+<p class="lead" data-es="Si hace falta una prueba, hago la automatización que queráis. Prefiero el contacto por correo." data-en="If you need proof, I'll build the automation you want. I prefer email.">Si hace falta una prueba, hago la automatización que queráis. Prefiero el contacto por correo.</p>
+<div class="cta"><a class="btn p" href="mailto:alexspacer9@gmail.com">alexspacer9@gmail.com</a><a class="btn g" id="cv2" href="cv/CV_AlexMoreno_ES.pdf" data-es="Descargar CV" data-en="Download CV">Descargar CV</a></div>
+<div class="meta"><span>Madrid, España</span><span data-es="Disponibilidad inmediata · Híbrido o remoto" data-en="Available immediately · Hybrid or remote">Disponibilidad inmediata · Híbrido o remoto</span><a href="https://www.linkedin.com/in/alex-moreno-jim%C3%A9nez-33b404128/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div></section>
+<footer><div class="wrap">© 2026 Alex Moreno Jiménez</div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+const sc=()=>nav.classList.toggle('s',scrollY>40);addEventListener('scroll',sc);sc();
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-'+l+']').forEach(e=>e.innerHTML=e.getAttribute('data-'+l));
+  document.getElementById('bes').classList.toggle('on',l==='es');
+  document.getElementById('ben').classList.toggle('on',l==='en');
+  const u='cv/CV_AlexMoreno_'+l.toUpperCase()+'.pdf';
+  cv.href=u;cv2.href=u;
+  localStorage.setItem('lang',l);
+}
+bes.onclick=()=>setLang('es');ben.onclick=()=>setLang('en');
+const q=new URLSearchParams(location.search).get('lang');
+const s=q||localStorage.getItem('lang')||(navigator.language.startsWith('en')?'en':'es');
+if(s==='en')setLang('en');
+</script>
+</body>
+</html>
