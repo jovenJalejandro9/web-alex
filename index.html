@@ -83,6 +83,15 @@ h2 b{font-weight:600}
 .two h3{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
 .two p{color:var(--slate);margin-top:10px;font-size:16px}
 .two p b{color:var(--navy);font-weight:600}
+/* cloud */
+.cloud{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 14px;margin-top:52px}
+.cloud li{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 20px 10px 14px;font-weight:600;font-size:16px;box-shadow:0 8px 22px -14px rgba(50,50,93,.35);animation:fl 7s ease-in-out infinite;animation-delay:var(--d);transition:box-shadow .25s,border-color .25s}
+.cloud li img{width:24px;height:24px;object-fit:contain}
+.cloud li.l{font-size:21px;padding:14px 26px 14px 18px}.cloud li.l img{width:32px;height:32px}
+.cloud li.t{background:var(--tint);font-weight:500;font-size:15px}
+.cloud li:hover{border-color:#b9b9f9;box-shadow:0 14px 30px -12px rgba(83,58,253,.4)}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.cloud li{animation:none}}
 /* contact */
 .contact{color:#fff;text-align:left;background:radial-gradient(60% 90% at 90% 0%,#ffb347,transparent 60%),radial-gradient(55% 80% at 70% 100%,#ff5fb5,transparent 62%),radial-gradient(60% 80% at 10% 110%,#9a6bff,transparent 60%),linear-gradient(120deg,#533afd,#2a1f8f)}
 .contact h2{color:#fff;font-size:48px}
@@ -178,6 +187,30 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 <div><h3 data-es="Formación" data-en="Education">Formación</h3><p data-es="<b>Ingeniería informática</b>" data-en="<b>Computer engineering</b>"><b>Ingeniería informática</b></p></div>
 <div><h3 data-es="Idiomas" data-en="Languages">Idiomas</h3><p data-es="<b>Español</b> · <b>Inglés</b> fluido, uso profesional" data-en="<b>Spanish</b> · <b>English</b> fluent, professional use"><b>Español</b> · <b>Inglés</b> fluido, uso profesional</p></div>
 </div>
+</div></section>
+
+<section id="stack"><div class="wrap">
+<p class="eyebrow" data-es="Modelos y herramientas" data-en="Models and tools">Modelos y herramientas</p>
+<h2 data-es="Con lo que <b>trabajo</b>" data-en="What I <b>work with</b>">Con lo que <b>trabajo</b></h2>
+<p class="lead" data-es="Los modelos de IA más relevantes de EE. UU. y China, y las herramientas donde viven los procesos de una empresa." data-en="The most relevant AI models from the US and China, and the tools where a company's processes live.">Los modelos de IA más relevantes de EE. UU. y China, y las herramientas donde viven los procesos de una empresa.</p>
+<ul class="cloud">
+<li class="m l" style="--d:0s"><img src="logos/openai.svg" alt="">ChatGPT</li>
+<li class="m" style="--d:-1.4s"><img src="logos/deepseek-color.svg" alt="">DeepSeek</li>
+<li class="m l" style="--d:-3s"><img src="logos/claude-color.svg" alt="">Claude</li>
+<li class="t" style="--d:-2s"><img src="logos/odoo.svg" alt="">Odoo</li>
+<li class="m" style="--d:-4.2s"><img src="logos/qwen-color.svg" alt="">Qwen</li>
+<li class="m l" style="--d:-.8s"><img src="logos/gemini-color.svg" alt="">Gemini</li>
+<li class="t" style="--d:-3.6s"><img src="logos/make.svg" alt="">Make</li>
+<li class="m" style="--d:-5s"><img src="logos/kimi-color.svg" alt="">Kimi</li>
+<li class="m l" style="--d:-2.4s"><img src="logos/grok.svg" alt="">Grok</li>
+<li class="t" style="--d:-4.6s"><img src="logos/linear.svg" alt="">Linear</li>
+<li class="m" style="--d:-1s"><img src="logos/zhipu-color.svg" alt="">GLM</li>
+<li class="m" style="--d:-3.3s"><img src="logos/meta-color.svg" alt="">Llama</li>
+<li class="t" style="--d:-5.4s"><img src="logos/trello.svg" alt="">Trello</li>
+<li class="m" style="--d:-2.8s"><img src="logos/minimax-color.svg" alt="">MiniMax</li>
+<li class="t" style="--d:-.4s"><img src="logos/microsoft.svg" alt="">Microsoft</li>
+<li class="t" style="--d:-4s"><img src="logos/linkedin.svg" alt="">LinkedIn</li>
+</ul>
 </div></section>
 
 <section class="contact" id="contacto"><div class="wrap">
