@@ -43,6 +43,16 @@ h1 b{font-weight:600}
 .btn.p{background:#fff;color:var(--indigo)}.btn.p:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(6,27,49,.3)}
 .btn.g{color:#fff;border:1px solid rgba(255,255,255,.5)}.btn.g:hover{background:rgba(255,255,255,.14)}
 .ph{width:300px;height:300px;border-radius:28px;object-fit:cover;box-shadow:0 30px 60px -20px rgba(6,27,49,.55);border:4px solid rgba(255,255,255,.35)}
+.proof{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.chip{display:inline-flex;align-items:center;gap:9px;font:inherit;font-size:14px;font-weight:500;color:#fff;text-decoration:none;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);padding:8px 15px 8px 12px;border-radius:99px;backdrop-filter:blur(6px);cursor:pointer;transition:.2s}
+.chip:hover{background:rgba(255,255,255,.26);transform:translateY(-1px)}
+.chip svg{width:17px;height:17px;flex:none}
+dialog{margin:auto;border:0;border-radius:20px;padding:0;max-width:min(920px,92vw);width:100%;background:#fff;box-shadow:0 40px 90px -20px rgba(6,27,49,.6);overflow:hidden}
+dialog::backdrop{background:rgba(6,27,49,.6);backdrop-filter:blur(4px)}
+dialog img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+.dl{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;font-size:14px;color:var(--slate)}
+.dl a{color:var(--indigo);font-weight:600;text-decoration:none}
+.dl button{font:inherit;font-weight:600;font-size:14px;border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 16px;cursor:pointer;color:var(--navy)}
 /* sections */
 section{padding:96px 0}
 .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);margin-bottom:14px}
@@ -132,6 +142,10 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 <a class="btn g" id="cv" href="cv/CV_AlexMoreno_ES.pdf" data-es="Ver CV (PDF)" data-en="View CV (PDF)">Ver CV (PDF)</a>
 <a class="btn g" href="https://www.linkedin.com/in/alex-moreno-jim%C3%A9nez-33b404128/" target="_blank" rel="noopener">LinkedIn</a>
 </div>
+<div class="proof">
+<button class="chip" id="dip" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.2 7 22l5-3 5 3-1.5-7.8"/></svg><span data-es="Diploma AI Heavy User · AiKit" data-en="AI Heavy User diploma · AiKit">Diploma AI Heavy User · AiKit</span></button>
+<a class="chip" href="docs/Carta_Recomendacion_AiKit.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><span data-es="Carta de recomendación" data-en="Recommendation letter (in Spanish)">Carta de recomendación</span></a>
+</div>
 </div>
 <img class="ph" src="foto.jpg" alt="Alex Moreno Jiménez">
 </div></header>
@@ -151,7 +165,7 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 <p class="eyebrow" data-es="Trayectoria" data-en="Experience">Trayectoria</p>
 <h2 data-es="De fundar empresas a <b>automatizarlas</b>" data-en="From founding companies to <b>automating them</b>">De fundar empresas a <b>automatizarlas</b></h2>
 <div class="tl">
-<article><div class="d"><span data-es="sept. 2023 – nov. 2026" data-en="Sep 2023 – Nov 2026">sept. 2023 – nov. 2026</span><span>Madrid</span></div><div><h3>AiKit Research</h3><p class="rol" data-es="Automatizador de procesos con IA" data-en="AI Process Automation Specialist">Automatizador de procesos con IA</p><p class="x" data-es="Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más." data-en="AI model distributor: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM and more.">Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más.</p><p class="x" data-es="Integra la IA con el CRM para automatizar cualquier proceso de la empresa." data-en="Integrates AI with the CRM to automate any company process.">Integra la IA con el CRM para automatizar cualquier proceso de la empresa.</p><p class="x it" data-es="Algunas de las cosas que he hecho:" data-en="Some of the things I have done:">Algunas de las cosas que he hecho:</p><ul><li data-es="Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo." data-en="I automated purchase invoices, employee time tracking and holiday management, freeing up dozens of hours of administrative work every month.">Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo.</li><li data-es="Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre." data-en="I also took on the role of Head of Talent: defining profiles, selection and closing.">Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre.</li></ul></div></article>
+<article><div class="d"><span data-es="jun. 2025 – nov. 2026" data-en="Jun 2025 – Nov 2026">jun. 2025 – nov. 2026</span><span>Madrid</span></div><div><h3>AiKit Research</h3><p class="rol" data-es="Automatizador de procesos con IA" data-en="AI Process Automation Specialist">Automatizador de procesos con IA</p><p class="x" data-es="Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más." data-en="AI model distributor: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM and more.">Distribuidor de modelos: ChatGPT, Claude, Gemini, Grok, DeepSeek, GLM y más.</p><p class="x" data-es="Integra la IA con el CRM para automatizar cualquier proceso de la empresa." data-en="Integrates AI with the CRM to automate any company process.">Integra la IA con el CRM para automatizar cualquier proceso de la empresa.</p><p class="x it" data-es="Algunas de las cosas que he hecho:" data-en="Some of the things I have done:">Algunas de las cosas que he hecho:</p><ul><li data-es="Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo." data-en="I automated purchase invoices, employee time tracking and holiday management, freeing up dozens of hours of administrative work every month.">Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo.</li><li data-es="Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre." data-en="I also took on the role of Head of Talent: defining profiles, selection and closing.">Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre.</li></ul></div></article>
 <article><div class="d"><span data-es="abr. 2021 – dic. 2025" data-en="Apr 2021 – Dec 2025">abr. 2021 – dic. 2025</span><span>Tres Cantos, Madrid</span></div><div><h3>Work In Space</h3><p class="rol" data-es="Fundador y propietario" data-en="Founder and owner">Fundador y propietario</p><p class="x" data-es="Coworking en espacio tecnológico centrado en IA." data-en="Coworking in a tech space focused on AI.">Coworking en espacio tecnológico centrado en IA.</p></div></article>
 <article><div class="d"><span data-es="jun. 2021 – mar. 2023" data-en="Jun 2021 – Mar 2023">jun. 2021 – mar. 2023</span><span>Madrid</span></div><div><h3>Talent Keepers Teambuilding</h3><p class="rol" data-es="Fundador" data-en="Founder">Fundador</p><p class="x" data-es="Teambuilding para equipos técnicos." data-en="Teambuilding for technical teams.">Teambuilding para equipos técnicos.</p></div></article>
 <article><div class="d"><span data-es="may. 2020 – may. 2022" data-en="May 2020 – May 2022">may. 2020 – may. 2022</span><span>Madrid</span></div><div><h3>BuhoLabs</h3><p class="rol" data-es="Cofundador y CEO" data-en="Co-founder and CEO">Cofundador y CEO</p><p class="x" data-es="Marketplace de productos químicos para distribuidores de todos los tamaños." data-en="Chemical products marketplace for distributors of all sizes.">Marketplace de productos químicos para distribuidores de todos los tamaños.</p></div></article>
@@ -215,6 +229,10 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 </div></section>
 <footer><div class="wrap">© 2026 Alex Moreno Jiménez</div></footer>
 
+<dialog id="dlg">
+<img src="docs/diploma.png" alt="Diploma AI Heavy User otorgado por AiKit Research, S.A. a Alejandro Octavio Moreno Jiménez (Alex Moreno Jiménez), firmado por Pablo Yusta Pliego">
+<div class="dl"><span data-es="Diploma AI Heavy User · AiKit Research, S.A. · a nombre de Alejandro Octavio Moreno Jiménez" data-en="AI Heavy User diploma · AiKit Research, S.A. · issued to Alejandro Octavio Moreno Jiménez">Diploma AI Heavy User · AiKit Research, S.A. · a nombre de Alejandro Octavio Moreno Jiménez</span><span><a href="docs/Diploma_AIHeavyUser_AiKit.pdf" target="_blank" rel="noopener" data-es="Abrir PDF" data-en="Open PDF">Abrir PDF</a> &nbsp; <button type="button" id="dx" data-es="Cerrar" data-en="Close">Cerrar</button></span></div>
+</dialog>
 <script>
 const nav=document.getElementById('nav');
 const sc=()=>nav.classList.toggle('s',scrollY>40);addEventListener('scroll',sc);sc();
@@ -227,6 +245,7 @@ function setLang(l){
   cv.href=u;cv2.href=u;
   localStorage.setItem('lang',l);
 }
+dip.onclick=()=>dlg.showModal();dx.onclick=()=>dlg.close();dlg.onclick=e=>{if(e.target===dlg)dlg.close()};
 bes.onclick=()=>setLang('es');ben.onclick=()=>setLang('en');
 const q=new URLSearchParams(location.search).get('lang');
 const s=q||localStorage.getItem('lang')||(navigator.language.startsWith('en')?'en':'es');
