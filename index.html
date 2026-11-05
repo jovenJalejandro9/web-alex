@@ -63,6 +63,16 @@ h2 b{font-weight:600}
 .ex{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;list-style:none}
 .ex li{display:flex;gap:14px;align-items:flex-start;font-size:17px}
 .ex li:before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--grad);margin-top:9px}
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.rc{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.rc .th{aspect-ratio:1000/707;overflow:hidden;border:1px solid var(--line);border-radius:10px;margin-bottom:22px;box-shadow:0 10px 24px -16px rgba(6,27,49,.35);position:relative;background:#fff}
+.rc .th img{display:block;width:100%;height:auto}
+.rc.q .th:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(transparent,#fff)}
+.rc p{flex:1}
+.rc .lk{margin-top:18px;color:var(--indigo);font-weight:600;font-size:15px}
+.rc:hover .lk{text-decoration:underline}
+.rc.q{justify-content:flex-start}
+.rc blockquote{font-size:20px;font-weight:400;line-height:1.35;letter-spacing:-.01em;margin:0 0 10px;color:var(--navy)}
 /* timeline */
 .tl{margin-top:48px;border-top:1px solid var(--line)}
 .tl article{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line)}
@@ -75,11 +85,6 @@ h2 b{font-weight:600}
 .tl ul{margin-top:10px;list-style:none}
 .tl li{position:relative;padding-left:20px;color:var(--navy);font-size:15.5px;margin-top:5px}
 .tl li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--grad)}
-.tl .ev{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px}
-.tl .ev a{color:var(--indigo);font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid transparent;transition:.2s}
-.tl .ev a:hover{border-bottom-color:var(--indigo)}
-.tl blockquote{margin-top:12px;padding-left:16px;border-left:3px solid var(--pill);font-style:italic;color:var(--slate);font-size:15.5px}
-.tl blockquote cite{display:block;font-style:normal;font-size:13.5px;margin-top:2px}
 .before{margin-top:44px}
 .before h3{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
 .before article{padding:18px 0}
@@ -98,7 +103,7 @@ h2 b{font-weight:600}
 .cloud li{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:10px 20px 10px 14px;font-weight:600;font-size:16px;box-shadow:0 8px 22px -14px rgba(50,50,93,.35);animation:fl 7s ease-in-out infinite;animation-delay:var(--d);transition:box-shadow .25s,border-color .25s}
 .cloud li img{width:24px;height:24px;object-fit:contain}
 .cloud li.l{font-size:21px;padding:14px 26px 14px 18px}.cloud li.l img{width:32px;height:32px}
-.cloud li.t{background:var(--tint);font-weight:500;font-size:15px}
+.cloud li.t{font-weight:500;font-size:15px}
 .cloud li:hover{border-color:#b9b9f9;box-shadow:0 14px 30px -12px rgba(83,58,253,.4)}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 @media(prefers-reduced-motion:reduce){.cloud li{animation:none}}
@@ -116,7 +121,7 @@ body{font-size:16px}
 .ph{width:180px;height:180px;order:-1;border-radius:22px}
 h1{font-size:44px}.tit{font-size:18px}
 section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
-.cards,.two,.ex{grid-template-columns:1fr}
+.cards,.two,.ex,.rec{grid-template-columns:1fr}
 .tl article{grid-template-columns:1fr;gap:8px}
 }
 </style>
@@ -156,11 +161,31 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 </div>
 </div></section>
 
-<section class="tint" id="trayectoria"><div class="wrap">
+<section class="tint" id="respaldo"><div class="wrap">
+<p class="eyebrow" data-es="Reconocimiento" data-en="Recognition">Reconocimiento</p>
+<h2 data-es="Respaldado por <b>AiKit Research</b>" data-en="Backed by <b>AiKit Research</b>">Respaldado por <b>AiKit Research</b></h2>
+<div class="rec">
+<a class="card rc" href="docs/Diploma_AIHeavyUser_AiKit.pdf" target="_blank" rel="noopener">
+<div class="th"><img src="docs/diploma.png" alt="Diploma AI Heavy User de AiKit Research, S.A., firmado por Pablo Yusta Pliego" loading="lazy"></div>
+<div class="dot"></div><h3 data-es="Diploma AI Heavy User" data-en="AI Heavy User diploma">Diploma AI Heavy User</h3>
+<p data-es="Por mi uso intensivo y avanzado de la inteligencia artificial en mi trabajo en AiKit. Firmado por Pablo Yusta, administrador único de AiKit Research." data-en="For my intensive and advanced use of artificial intelligence in my work at AiKit. Signed by Pablo Yusta, sole director of AiKit Research.">Por mi uso intensivo y avanzado de la inteligencia artificial en mi trabajo en AiKit. Firmado por Pablo Yusta, administrador único de AiKit Research.</p>
+<span class="lk" data-es="Ver diploma (PDF) ↗" data-en="View diploma (PDF) ↗">Ver diploma (PDF) ↗</span>
+</a>
+<a class="card rc q" href="docs/Carta_Recomendacion_AiKit.pdf" target="_blank" rel="noopener">
+<div class="th"><img src="docs/carta.png" alt="Carta de recomendación de AiKit Research, S.A., firmada por Pablo Yusta Pliego" loading="lazy"></div>
+<div class="dot"></div><h3 data-es="Carta de recomendación" data-en="Recommendation letter">Carta de recomendación</h3>
+<blockquote>«Mi recomendación es sin reservas.»</blockquote>
+<p data-es="Pablo Yusta Pliego, administrador único de AiKit Research. Tres Cantos, 30 de octubre de 2026." data-en="Pablo Yusta Pliego, sole director of AiKit Research. Tres Cantos, 30 October 2026. (Original in Spanish.)">Pablo Yusta Pliego, administrador único de AiKit Research. Tres Cantos, 30 de octubre de 2026.</p>
+<span class="lk" data-es="Leer carta completa (PDF) ↗" data-en="Read full letter (PDF, in Spanish) ↗">Leer carta completa (PDF) ↗</span>
+</a>
+</div>
+</div></section>
+
+<section id="trayectoria"><div class="wrap">
 <p class="eyebrow" data-es="Trayectoria" data-en="Experience">Trayectoria</p>
 <h2 data-es="De fundar empresas a <b>automatizarlas</b>" data-en="From founding companies to <b>automating them</b>">De fundar empresas a <b>automatizarlas</b></h2>
 <div class="tl">
-<article><div class="d"><span data-es="jun. 2025 – nov. 2026" data-en="Jun 2025 – Nov 2026">jun. 2025 – nov. 2026</span><span>Madrid</span></div><div><h3>AiKit Research</h3><p class="rol" data-es="Automatizador de procesos con IA" data-en="AI Process Automation Specialist">Automatizador de procesos con IA</p><p class="x" data-es="AiKit Research es una de las empresas pioneras en IA para empresas: conecta la IA con sus ERP y sus sistemas para automatizar procesos reales, trabajando con los principales modelos, tanto estadounidenses como chinos, como ChatGPT, Claude, Gemini, DeepSeek o GLM." data-en="AiKit Research is one of the pioneering companies in AI for businesses: it connects AI to their ERPs and systems to automate real processes, working with the leading models, both American and Chinese, such as ChatGPT, Claude, Gemini, DeepSeek or GLM.">AiKit Research es una de las empresas pioneras en IA para empresas: conecta la IA con sus ERP y sus sistemas para automatizar procesos reales, trabajando con los principales modelos, tanto estadounidenses como chinos, como ChatGPT, Claude, Gemini, DeepSeek o GLM.</p><p class="x it" data-es="Algunas de las cosas que he hecho:" data-en="Some of the things I have done:">Algunas de las cosas que he hecho:</p><ul><li data-es="Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo." data-en="I automated purchase invoices, employee time tracking and holiday management, freeing up dozens of hours of administrative work every month.">Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo.</li><li data-es="Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre." data-en="I also took on the role of Head of Talent: defining profiles, selection and closing.">Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre.</li></ul><div class="ev"><a href="docs/Diploma_AIHeavyUser_AiKit.pdf" target="_blank" rel="noopener" data-es="Diploma AI Heavy User ↗" data-en="AI Heavy User diploma ↗">Diploma AI Heavy User ↗</a><a href="docs/Carta_Recomendacion_AiKit.pdf" target="_blank" rel="noopener" data-es="Carta de recomendación ↗" data-en="Recommendation letter (in Spanish) ↗">Carta de recomendación ↗</a></div><blockquote data-es="«Mi recomendación es sin reservas.»<cite>Pablo Yusta Pliego, administrador único de AiKit Research</cite>" data-en="«Mi recomendación es sin reservas.»<cite>Pablo Yusta Pliego, sole director of AiKit Research (original in Spanish)</cite>">«Mi recomendación es sin reservas.»<cite>Pablo Yusta Pliego, administrador único de AiKit Research</cite></blockquote></div></article>
+<article><div class="d"><span data-es="jun. 2025 – nov. 2026" data-en="Jun 2025 – Nov 2026">jun. 2025 – nov. 2026</span><span>Madrid</span></div><div><h3>AiKit Research</h3><p class="rol" data-es="Automatizador de procesos con IA" data-en="AI Process Automation Specialist">Automatizador de procesos con IA</p><p class="x" data-es="AiKit Research es una de las empresas pioneras en IA para empresas: conecta la IA con sus ERP y sus sistemas para automatizar procesos reales, trabajando con los principales modelos, tanto estadounidenses como chinos, como ChatGPT, Claude, Gemini, DeepSeek o GLM." data-en="AiKit Research is one of the pioneering companies in AI for businesses: it connects AI to their ERPs and systems to automate real processes, working with the leading models, both American and Chinese, such as ChatGPT, Claude, Gemini, DeepSeek or GLM.">AiKit Research es una de las empresas pioneras en IA para empresas: conecta la IA con sus ERP y sus sistemas para automatizar procesos reales, trabajando con los principales modelos, tanto estadounidenses como chinos, como ChatGPT, Claude, Gemini, DeepSeek o GLM.</p><p class="x it" data-es="Algunas de las cosas que he hecho:" data-en="Some of the things I have done:">Algunas de las cosas que he hecho:</p><ul><li data-es="Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo." data-en="I automated purchase invoices, employee time tracking and holiday management, freeing up dozens of hours of administrative work every month.">Automaticé las facturas de compras, el fichaje y la gestión de vacaciones, liberando decenas de horas al mes de trabajo administrativo.</li><li data-es="Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre." data-en="I also took on the role of Head of Talent: defining profiles, selection and closing.">Asumí también el rol de Head of Talent: definición de perfiles, selección y cierre.</li></ul></div></article>
 <article><div class="d"><span data-es="abr. 2021 – dic. 2025" data-en="Apr 2021 – Dec 2025">abr. 2021 – dic. 2025</span><span>Tres Cantos, Madrid</span></div><div><h3>Work In Space</h3><p class="rol" data-es="Fundador y propietario" data-en="Founder and owner">Fundador y propietario</p><p class="x" data-es="Coworking en espacio tecnológico centrado en IA." data-en="Coworking in a tech space focused on AI.">Coworking en espacio tecnológico centrado en IA.</p></div></article>
 <article><div class="d"><span data-es="jun. 2021 – mar. 2023" data-en="Jun 2021 – Mar 2023">jun. 2021 – mar. 2023</span><span>Madrid</span></div><div><h3>Talent Keepers Teambuilding</h3><p class="rol" data-es="Fundador" data-en="Founder">Fundador</p><p class="x" data-es="Teambuilding para equipos técnicos." data-en="Teambuilding for technical teams.">Teambuilding para equipos técnicos.</p></div></article>
 <article><div class="d"><span data-es="may. 2020 – may. 2022" data-en="May 2020 – May 2022">may. 2020 – may. 2022</span><span>Madrid</span></div><div><h3>BuhoLabs</h3><p class="rol" data-es="Cofundador y CEO" data-en="Co-founder and CEO">Cofundador y CEO</p><p class="x" data-es="Marketplace de productos químicos para distribuidores de todos los tamaños." data-en="Chemical products marketplace for distributors of all sizes.">Marketplace de productos químicos para distribuidores de todos los tamaños.</p></div></article>
@@ -175,7 +200,7 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 </div>
 </div></section>
 
-<section id="stack"><div class="wrap">
+<section class="tint" id="stack"><div class="wrap">
 <p class="eyebrow" data-es="Modelos y herramientas" data-en="Models and tools">Modelos y herramientas</p>
 <h2 data-es="Con lo que <b>trabajo</b>" data-en="What I <b>work with</b>">Con lo que <b>trabajo</b></h2>
 <p class="lead" data-es="Los modelos de IA más relevantes de EE. UU. y China, y las herramientas donde viven los procesos de una empresa." data-en="The most relevant AI models from the US and China, and the tools where a company's processes live.">Los modelos de IA más relevantes de EE. UU. y China, y las herramientas donde viven los procesos de una empresa.</p>
@@ -202,7 +227,7 @@ section{padding:68px 0}h2{font-size:30px}.contact h2{font-size:34px}
 </ul>
 </div></section>
 
-<section class="tint"><div class="wrap">
+<section><div class="wrap">
 <p class="eyebrow" data-es="Mi set de trabajo" data-en="My toolset">Mi set de trabajo</p>
 <h2 data-es="Sistemas agénticos que <b>uso a diario</b>" data-en="Agentic systems I <b>use daily</b>">Sistemas agénticos que <b>uso a diario</b></h2>
 <div class="two">
